@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+  <title>Box</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #7e0315;
+      font-family: 'Poppins', sans-serif;
+      overflow: hidden;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 800px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #640000;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .letter h1 {
+      color: white;
+      font-size: 24px;
+      line-height: 1.6;
+      margin: 0;
+      opacity: 0;
+      animation: fadeIn 2s ease-in-out forwards;
+      animation-delay: 0.5s;
+    }
+
+    .rose {
+      width: 200px;
+      height: 200px;
+      position: relative;
+      animation: yidon 5s infinite;
+      transform: translateY(40%);
+      opacity: 0;
+      animation: fadeIn 2s ease-in-out forwards;
+      animation-delay: 1s;
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
+    }
+
+    .petal {
+      width: 50px;
+      height: 50px;
+      background: #ffeaec;
+      border-radius: 0px 50%;
+      position: absolute;
+      box-shadow: 0 0 10px #D1123F;
+      z-index: 2;
+      transform-origin: bottom right;
+      animation: zhankai2 10s infinite;
+    }
+
+    .petal:nth-child(2) {
+      transform-origin: right bottom;
+      transform: rotate(90deg);
+      background: #fe7696;
+      left: -10px;
+      animation: zhankai1 10s infinite;
+    }
+
+    .petal:nth-child(3) {
+      width: 40px;
+      height: 40px;
+      left: 10px;
+      top: -20px;
+      z-index: 1;
+      background: #f03a64;
+      transform-origin: bottom right;
+      animation: zhankai2 10s infinite;
+    }
+
+    .petal:nth-child(4) {
+      transform: rotate(90deg);
+      width: 40px;
+      height: 40px;
+      left: 0px;
+      top: -20px;
+      z-index: 1;
+      background: #b77078;
+      transform-origin: bottom right;
+      animation: zhankai1 10s infinite;
+    }
+
+    .petal:nth-child(5) {
+      width: 50px;
+      height: 50px;
+      border-radius: 20px;
+      left: 20px;
+      top: -30px;
+      z-index: 0;
+      background: #D1123F;
+    }
+
+    .leaf {
+      position: absolute;
+      top: 120px;
+      left: -115px;
+    }
+
+    .stem {
+      width: 240px;
+      height: 40px;
+      background: transparent;
+      border: 8px solid #8ac78a;
+      border-color: #77a377 transparent transparent transparent;
+      border-radius: 50% 50%;
+      transform: rotate(100deg);
+    }
+
+    .leafs {
+      width: 50px;
+      height: 40px;
+      border-radius: 0px 50%;
+      background: #77a377;
+      position: absolute;
+      top: 0;
+      left: 100px;
+      z-index: 49;
+    }
+
+    .leafs:nth-child(2) {
+      width: 40px;
+      height: 20px;
+      top: 40px;
+      left: 140px;
+      transform: rotate(120deg);
+    }
+
+    @keyframes yidon {
+      50% {
+        transform: translateY(35%);
+      }
+      100% {
+        transform: translateY(40%);
+      }
+    }
+
+    @keyframes zhankai1 {
+      50% {
+        transform: rotate(110deg);
+      }
+      100% {
+        transform: rotate(90deg);
+      }
+    }
+
+    @keyframes zhankai2 {
+      50% {
+        transform: rotate(-20deg);
+      }
+      100% {
+        transform: rotate(0deg);
+      }
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background-color: #7e0315;
+      color: white;
+      font-family: 'Poppins', sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="letter">
+      <h1>You are the most amazing person I have ever met, and I feel so proud to call you my boyfriend. I don't know how I got so lucky to have you in my life, but I promise to cherish every moment we have together. Happy Valentine's, my one and only! >ᴗ< ₊˚♡</h1>
+    </div>
+    <div class="rose">
+      <div class="flower">
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="petal"></div>
+      </div>
+      <div class="leaf">
+        <div class="stem"></div>
+        <div class="leafs"></div>
+        <div class="leafs"></div>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <p>Made with love by Htet</p>
+  </footer>
+</body>
+</html>

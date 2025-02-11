@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="styles/toggle.css">
+  <title>Box</title>
+  <style>
+    body {
+      opacity: 1;
+      transition: opacity 1s ease-in-out;
+    }
+    body.fade-out {
+      opacity: 0;
+    }
+  </style>
+</head>
+<body style="background-color: black; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0;">
+  <div class="love">
+    <input id="switch" type="checkbox" onclick="goToButton()"> <!-- Added onclick here -->
+    <label class="love-heart" for="switch">
+      <i class="left"></i>
+      <i class="right"></i>
+      <i class="bottom"></i>
+      <div class="round"></div>
+    </label>
+  </div>
+  <script src="../scripts/toggle.js"></script>
+  <script>
+    function goToButton() {
+      // Apply fade-out class to body to start the fade-out effect
+      document.body.classList.add('fade-out');
+      
+      // Wait 3 seconds before redirecting to the new page
+      setTimeout(function() {
+        window.location.href = 'button.html'; // Redirect to button.html
+      }, 3000); // 3-second delay
+    }
+  </script>
+</body>
+</html>
